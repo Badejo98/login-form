@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN FORM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h2 class="topic">MODAL LOGIN FORM </h2>
+
+    <button onclick = "document.getElementById('id01').style.display= 'block' " style = "width:auto;" >Login</button>
+
+    <div id="id01" class="modal">
+      <form action="" class="modal-content animate">
+          <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none' " class="close" title="close modal"></span>
+              <img src="AF-5.jpg" alt="Avatar" class="Avatar">
+          </div>
+
+          <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+              <button type="submit">Login</button>
+              <label >
+                  <input type="checkbox" checked="checked" name="Remember">Remember me
+              </label>
+          </div>
+
+          <div class="container" style="background-color:#f1f1f1">
+           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+           <span class="psw">Forget <a href="#">password</a> </span>
+            
+          </div>  
+      </form>  
+    </div>
+
+    <script>
+        var modal = document.getElementById('id01');
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display='none';
+            }
+        }
+    </script>
+
+</body>
+</html>
